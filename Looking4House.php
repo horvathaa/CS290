@@ -12,13 +12,13 @@
 		
 			<div style = "display: inline-block; text-align: left; ">
 			
-			<section style = "border: 3px solid #000000;">
+			<section style = "border: 3px solid #000000; padding: 10px;">
 				<b><p style="font-size: 18px" > Type of housing  </p></b>
 				<input type="checkbox" name="mychk[]" value="1"> House <input type="checkbox" name="mychk[]" value="2"> Apartment <input type="checkbox" name="mychk[]" value="3"> Duplex<br>
 				
 			</section><br>
 				
-				<section style = "border: 3px solid #000000;">	
+				<section style = "border: 3px solid #000000; padding: 10px;">	
 					<br><b>Price Range: 
 										<select name="price">
 											<option value = "1">$1,000 to $1,500</option>
