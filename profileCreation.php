@@ -49,26 +49,33 @@ greyish teal#A7BFB1
 			<input type="text" name="firstname"><br>
 			Last name:<br>
 			<input type="text" name="lastname"><br>
-			Onid Email:<br>
-			<input type="text" name="onidemail"><br>
-			Phone optional:<br>
+			Phone &#40;optional&#41;:<br>
 			<input type="text" name="phone"><br><br>
 			Gender:<br>
-				<input type="radio" name="gender" value="male" checked> Male<br>
+				<input type="radio" name="gender" value="male"> Male<br>
 				<input type="radio" name="gender" value="female"> Female<br><br>
-			Photo optional:<br>
-			<input type="text" name="photo"><br>
+			Photo &#40;optional&#41;:<br>
+			<input type="file" name="photo"><br>
 			Major:<br>
 			<input type="text" name="major"><br>
+			Age:<br>
+			<input type="text" name="age"><br>
 			Year in school:<br>
 			<input type="text" name="schYear"><br>
+			Relationship Status:<br>
+				<input type="radio" name="relations" value="single"> Single<br>
+				<input type="radio" name="relations" value="dating"> In a Relationship<br>
+				<input type="radio" name="relations" value="prefNotTo"> Prefer not to say<br>
+				<img src="http://www.bizfilings.com/images/QuestionMrk.gif" title="Living conditions can change when you have a partner! Let your potential roommates know!"><br><br>
 			Description/Bio:<br>
-			<input type="text" name="descrip"><br><br>
+			<textarea rows="6" cols="35">
+			</textarea> <br><br>
 		</fieldset>
 		<fieldset>
 			<legend> Connect through Social:</legend>
-			<img src="https://www.facebookbrand.com/img/fb-art.jpg">
-			<img src="http://www.adweek.com/socialtimes/files/2012/06/twitter-bird-2012.png">
+			<a href="http://www.facebook.com">
+				<img src="http://www.inovaeducation.com/sites/all/themes/inovaeducation/images/facebookIcon.png">
+			</a>
 			
 		</fieldset>
 	<br>
