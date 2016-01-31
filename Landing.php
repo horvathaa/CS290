@@ -36,7 +36,10 @@ greyish teal#A7BFB1
 
 <!--<body background="">
 -->
-
+<?php include("_header.php"); ?>
+<?php
+	if(checkAuth(true) != "") {
+?>
 
 <body bgcolor="#F7A810">
 <h1 style="float: center;">Welcome lawl</h1>
@@ -44,4 +47,8 @@ greyish teal#A7BFB1
 
 <div id="logIn" style="float: center;"> Log in API goes here...</div>
 
+
+
 </body>
+
+<?php } ?>
