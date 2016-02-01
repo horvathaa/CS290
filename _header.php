@@ -46,3 +46,7 @@
 
 ?>
 
+<center><a href="Landing.php">Home</a>
+<!-- <a href="list.php">List of stuff</a> -->
+<a href="logout.php">Log Out</a></center>
+

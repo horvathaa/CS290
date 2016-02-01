@@ -1,3 +1,4 @@
+<?php include("_header.php"); ?>
 <style>
 #header {
     background-color:#6AC6AF;

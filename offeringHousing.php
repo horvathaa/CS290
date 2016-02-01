@@ -1,3 +1,4 @@
+<?php include("_header.php"); ?>
 <html>
 <head>
 	<title>Offer Housing</title>
