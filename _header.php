@@ -46,7 +46,32 @@
 
 ?>
 
-<center><a href="Landing.php">Home</a>
-<!-- <a href="list.php">List of stuff</a> -->
-<a href="logout.php">Log Out</a></center>
+<html lang = "en">
+<head>
+	<meta charset = "utf-8">
+	<meta name = "viewport" content = "width = device-width, initial-scale = 1">
+	<title> Hom-E </title>
+	<link href = "css/style.css" rel = "stylesheet">
+	<link href = "images/logo.ico" rel = "shortcut icon">
+</head>
 
+<body>
+<div id = "wrapper">
+	<!-- TOPBAR ==================================================================================-->
+	<div id = "topbar">
+		<a href = "about.php"><img src = "images/logo.png"></a>
+	</div>
+	<!-- MAIN NAV ================================================================================-->
+	<nav>
+		<ul>
+			<li><a href = "index.php"> Home </a></li>
+			<li><a href = "fileName.php"> link 1 </a></li>
+			<li><a href = "fileName.php"> link 2 </a></li>
+			<li><a href = "profile.php"> Profile </a></li>
+		</ul>
+	</nav>
+	
+	<div class = "clearfix"></div>
+	<hr>
+	
+</html>
