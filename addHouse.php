@@ -27,23 +27,27 @@
     // $rules = $data['rules'];
     // $userID = $data['userID'];
     
-	$query = "INSERT INTO House_T(HouseID, Reason, Housing Type, roomAmount, Address, rent, untilCost, availDate, leaseLength, rules, userID) Values(?,?,?,?,?,?,?,?,?,?,?)";
+	$query = "INSERT INTO House_T(HouseID, Reason, HousingType, roomAmount, Address, rent, untilCost, availDate, leaseLength, rules, userID) Values(?,?,?,?,?,?,?,?,?,?,?)";
 	
-	$statement = $finalDB->prepare($query);
+	if($statement = $finalDB->prepare($query)){
 	
-	$houseId= rand(4, 1000);
-	$reason = $_REQUEST["reason"];
-    $housingType = $_REQUEST['housingType'];
-    $roomAmount = $_REQUEST['roomAmount'];
-    $address = $_REQUEST['address'];
-    $rent = $_REQUEST['costMonth'];
-    $utilCost = $_REQUEST['costUtil'];
-    $availDate = $_REQUEST['availableDate'];
-    $leaseLength = $_REQUEST['leaseLength'];
-    $rules = $_REQUEST['rules'];
-    $userID = rand(2, 2000);
-	
-	$statement->bind_param('issisddsssi', $houseId, $reason, $housingType, $roomAmount, $address, $rent, $utilCost, $availDate, $leaseLength, $rules, $userID);
-	$statement->execute();
-	$statment->close();
+		$houseId= rand(4, 1000);
+		$reason = $_REQUEST["reason"];
+		$housingType = $_REQUEST['housingType'];
+		$roomAmount = $_REQUEST['roomAmount'];
+		$address = $_REQUEST['address'];
+		$rent = $_REQUEST['costMonth'];
+		$utilCost = $_REQUEST['costUtil'];
+		$availDate = $_REQUEST['availableDate'];
+		$leaseLength = $_REQUEST['leaseLength'];
+		$rules = $_REQUEST['rules'];
+		$userID = rand(2, 2000);
+		
+		$statement->bind_param('issisddsssi', $houseId, $reason, $housingType, $roomAmount, $address, $rent, $utilCost, $availDate, $leaseLength, $rules, $userID);
+		$statement->execute();
+		$statement->close();
+	}
+	else{
+		printf("Error: %s\n", $finalDB->error);
+	}
 ?>
