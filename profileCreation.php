@@ -69,7 +69,7 @@ greyish teal#A7BFB1
 				<input type="radio" name="relations" value="prefNotTo"> Prefer not to say<br>
 				<img src="http://www.bizfilings.com/images/QuestionMrk.gif" title="Living conditions can change when you have a partner! Let your potential roommates know!"><br><br>
 			Description/Bio:<br>
-			<textarea rows="6" cols="35">
+			<textarea name="bio" rows="6" cols="35">
 			</textarea> <br><br>
 		</fieldset>
 		<fieldset>
