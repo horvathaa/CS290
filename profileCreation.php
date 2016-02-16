@@ -42,7 +42,7 @@ greyish teal#A7BFB1
 	<h1>
 		Creating your Profile
 	</h1>
-	<form action="action_page.php">
+	<form action="addUser.php" method="post">
 		<fieldset>
 			<legend> Personal information:</legend>
 			
