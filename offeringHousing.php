@@ -8,7 +8,7 @@
 	<div>
 		<h1>Offer Housing</h1>
 		<p>This form will create your housing ad. Please fill it out to the best of your ability so the best people can be matched.</p>
-		<form method="post" action='addHouse.php'>
+		<form method="post" action='addHouse.php' class="inform">
 			<label>Why are you posting the ad?<br></label>
 				<input type="radio" name="reason" value="permanent"> Permanently Vacating <br>
 				<input type="radio" name="reason" value="sublet"> Subletting <br>
@@ -34,6 +34,7 @@
 					Put rules here
 				</textarea>
 				<br>
+			
 			<input type="submit">
 		</form>
 	

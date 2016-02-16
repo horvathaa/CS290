@@ -1,6 +1,6 @@
 <?php
-
-	$servername = "onnidd.cws.oregonstate.edu";
+	ini_set('display_errors', 'On');
+	$servername = "oniddb.cws.oregonstate.edu";
 	$username = "horvatha-db";
 	$password = "4xunHq7hNuAmTgFb";
 	$dbName = "horvatha-db";
@@ -27,11 +27,12 @@
     // $rules = $data['rules'];
     // $userID = $data['userID'];
     
-	$query = "INSERT INTO House_T(Reason, Housing Type, roomAmount, Address, rent, untilCost, availDate, leaseLength, rules, userID) Values(?,?,?,?,?,?,?,?,?,?)";
+	$query = "INSERT INTO House_T(HouseID, Reason, Housing Type, roomAmount, Address, rent, untilCost, availDate, leaseLength, rules, userID) Values(?,?,?,?,?,?,?,?,?,?,?)";
 	
 	$statement = $finalDB->prepare($query);
 	
-	$reason = $_REQUEST['reason'];
+	$houseId= rand(4, 1000);
+	$reason = $_REQUEST["reason"];
     $housingType = $_REQUEST['housingType'];
     $roomAmount = $_REQUEST['roomAmount'];
     $address = $_REQUEST['address'];
@@ -40,9 +41,9 @@
     $availDate = $_REQUEST['availableDate'];
     $leaseLength = $_REQUEST['leaseLength'];
     $rules = $_REQUEST['rules'];
-    $userID = $_REQUEST['userID'];
+    $userID = rand(2, 2000);
 	
-	$statement->bind_param('ssisddsssi', $reason, $housingType, $roomAmount, $address, $rent, $utilCost, $availDate, $leaseLength, $rules, $userID);
+	$statement->bind_param('issisddsssi', $houseId, $reason, $housingType, $roomAmount, $address, $rent, $utilCost, $availDate, $leaseLength, $rules, $userID);
 	$statement->execute();
-	
+	$statment->close();
 ?>
