@@ -8,7 +8,7 @@
 	<div>
 		<h1>Offer Housing</h1>
 		<p>This form will create your housing ad. Please fill it out to the best of your ability so the best people can be matched.</p>
-		<form>
+		<form method="post" action='addHouse.php'>
 			<label>Why are you posting the ad?<br></label>
 				<input type="radio" name="reason" value="permanent"> Permanently Vacating <br>
 				<input type="radio" name="reason" value="sublet"> Subletting <br>
@@ -19,6 +19,8 @@
 				<input type="radio" name="housingType" value="duplex"> Duplex <br>
 			<label>Number of rooms available?</label>
 				<input type="text" name="roomAmount"><br>
+			<label>Address?</label>
+				<input type="text" name="address"><br>
 			<label>Rent cost per month?</label>
 				<input type="text" name="costMonth"><br>
 			<label>Utility cost per month?</label>

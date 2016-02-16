@@ -42,7 +42,7 @@
 		   return "";
 }
 
-	
+	function addHouse()		
 
 ?>
 
