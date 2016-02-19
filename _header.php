@@ -59,7 +59,6 @@
 			<li><a href = "otherPage.php"> Other </a></li>
 			<li>
 				<a href = "viewProfile.php" id = 'dropDownTop'> Account </a>
-				<a href = "ViewProfile.php" id = 'dropDownTop'> Account </a></li>
 				<ul id = 'dropDownMenu'>
 					<li><a href = "ViewProfile.php"> Profile </a></li>
 					<li><a href = "logout.php"> Logout </a></li>
