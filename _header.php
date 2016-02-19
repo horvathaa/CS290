@@ -56,12 +56,14 @@
 		<ul>
 			<li><a href = "Landing.php"> Home </a></li>
 			<li><a href = "searchEngine.php"> Search </a></li>
+			<li><a href = "otherPage.php"> Other </a></li>
 			<li>
-				<a href = "viewProfile.php" id = 'dropDownTop'> Account </a></li>
+				<a href = "viewProfile.php" id = 'dropDownTop'> Account </a>
 				<ul id = 'dropDownMenu'>
-					<li><a href = "viewProfile.php"> Profile </a></li>
+					<li><a href = "ViewProfile.php"> Profile </a></li>
 					<li><a href = "logout.php"> Logout </a></li>
 				</ul>
+			</li>
 		</ul>
 	</nav>
 	
