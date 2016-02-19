@@ -58,11 +58,8 @@
 			<li><a href = "searchEngine.php"> Search </a></li>
 			<li><a href = "otherPage.php"> Other </a></li>
 			<li>
-<<<<<<< HEAD
 				<a href = "viewProfile.php" id = 'dropDownTop'> Account </a>
-=======
 				<a href = "ViewProfile.php" id = 'dropDownTop'> Account </a></li>
->>>>>>> 12c2e675f1d54b938e60c3e7a5015c32effe3675
 				<ul id = 'dropDownMenu'>
 					<li><a href = "ViewProfile.php"> Profile </a></li>
 					<li><a href = "logout.php"> Logout </a></li>
