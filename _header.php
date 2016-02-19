@@ -54,10 +54,14 @@
 	<!-- MAIN NAV ================================================================================-->
 	<nav>
 		<ul>
-			<li><a href = "index.php"> Home </a></li>
-			<li><a href = "fileName.php"> link 1 </a></li>
-			<li><a href = "fileName.php"> link 2 </a></li>
-			<li><a href = "profile.php"> Profile </a></li>
+			<li><a href = "Landing.php"> Home </a></li>
+			<li><a href = "searchEngine.php"> Search </a></li>
+			<li>
+				<a href = "viewProfile.php" id = 'dropDownTop'> Account </a></li>
+				<ul id = 'dropDownMenu'>
+					<li><a href = "viewProfile.php"> Profile </a></li>
+					<li><a href = "logout.php"> Logout </a></li>
+				</ul>
 		</ul>
 	</nav>
 	

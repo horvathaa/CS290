@@ -74,9 +74,6 @@ nav > ul > li > a:hover, nav > ul > li.active > a
 	border-bottom: 3px solid #3399ff;
 }
 
-/* UNCOMMENT THIS IF WE WANT TO USE A DROPDOWN MENU */
-/* WILL ALSO NEED TO INCLUDE A NEW JS FILE */
-/*
 #dropDownMenu
 {
 	background: #303030;
