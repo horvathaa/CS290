@@ -49,14 +49,14 @@
 <div id = "wrapper">
 	<!-- TOPBAR ==================================================================================-->
 	<div id = "topbar">
-		<a href = "about.php"><img src = "images/logo.png"></a>
+		<a href = "result.php"><img src = "images/logo.png"></a>
 	</div>
 	<!-- MAIN NAV ================================================================================-->
 	<nav>
 		<ul>
 			<li><a href = "Landing.php"> Home </a></li>
 			<li><a href = "searchEngine.php"> Search </a></li>
-			<li><a href = "otherPage.php"> Other </a></li>
+			<li><a href = "result.php"> Result </a></li>
 			<li>
 				<a href = "ViewProfile.php" id = 'dropDownTop'> Account </a>
 				<ul id = 'dropDownMenu'>
