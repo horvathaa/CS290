@@ -1,35 +1,6 @@
 <!DOCTYPEhtml>
 <?php include("_header.php"); ?>
 <html>
-<head> 
-	<!-- set block to show content -->
-		<script>
-		//element.style.display = "block"; // to show
-		//element.style.display = "none"; // to hide 
-			function showDiv( id ) {
-			document.all.textBox01.style.display = 'block';
-			document.all.textBox02.style.display = 'block';
-			document.all.textBox01.value = '';
-			document.all.textBox02.value = '';
-			document.all[ id ].style.display = 'block';
-			document.all[ id ].focus();
-			}
-        </script>
-		
-		<script>
-		//element.style.display = "block"; // to show
-		//element.style.display = "none"; // to hide 
-			function hideDiv( id ) {
-			document.all.textBox01.style.display = 'none';
-			//document.all.textBox02.style.display = 'block';
-			document.all.textBox01.value = '';
-			document.all.textBox02.value = '';
-			document.all[ id ].style.display = 'block';
-			document.all[ id ].focus();
-			}
-        </script>
-		
-</head>
 <body>
 
 <form action="lookingform.php" method="POST">
@@ -60,12 +31,16 @@
 					<br><b>My Bed Time: <input type="text" name="bedtime"></b><br>  
 					
 					<b><p style="font-size: 18px" > Pet(s): </p></b>
-					<b><center><p style="font-size: 10px; font-style: italic;" > If yes, what kind of pets do you have ? </p></center></b>
+					<!-- <b><center><p style="font-size: 10px; font-style: italic;" > If yes, what kind of pets do you have ? </p></center></b> -->
 					
-					<input type="radio" name="pettype" value="1" style="vertical-align: middle" onClick="showDiv( 'textBox01' );" > Yes 
-					<input type="radio" name="pettype" value="2" style="vertical-align: middle" onClick="hideDiv( 'textBox01' );" > No
-					<input type="radio" name="pettype" value="3" style="vertical-align: middle " onClick="hideDiv( 'textBox01' );" > Prefer not to answer <br>
-					<br><input type=text name=textBox01 size=30 style="display:none"> 
+					<input type="radio" name="pettype" value="1" style="vertical-align: middle" onClick="showDiv( 'textbox' );" > Yes 
+					<input type="radio" name="pettype" value="2" style="vertical-align: middle" onClick="hideDiv( 'textbox' );" > No
+					<input type="radio" name="pettype" value="3" style="vertical-align: middle " onClick="hideDiv( 'textbox' );" > Prefer not to answer <br>
+					
+					<div id="textbox" style="display:none;">
+						<p>What type of pet do you have ?<p>
+						<input type =text name=petinfo size=30>
+					</div>
 						
 					<!--  Type of pet: <input type="text" name="pet"> -->
 					
@@ -93,7 +68,20 @@
 		</center>
 </form>
 
-</form>
-
 </body>
+
+	<!-- set block to show content -->
+	
+<script type="text/javascript">
+		//element.style.display = "block"; // to show
+		//element.style.display = "none"; // to hide 
+function showDiv(id) {
+        document.getElementById(id).style.display = "block";
+}
+
+function hideDiv(id) {
+        document.getElementById(id).style.display = "none";
+}
+</script>
+
 </html>
