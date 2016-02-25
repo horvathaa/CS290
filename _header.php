@@ -56,7 +56,7 @@
 		<ul>
 			<li><a href = "Landing.php"> Home </a></li>
 			<li><a href = "searchEngine.php"> Search </a></li>
-			<li><a href = "result.php"> Result </a></li>
+			<li><a href = "results.php"> Result </a></li>
 			<li>
 				<a href = "ViewProfile.php" id = 'dropDownTop'> Account </a>
 				<ul id = 'dropDownMenu'>

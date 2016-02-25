@@ -1,0 +1,38 @@
+Starting at landing page
+ --> with no explanation go to login
+ --> after login go to blank screen
+ **need to have an actual landing page which doesn't take us directly to a user profile
+ **should have the option of signing in or creating account; both will take you through
+  CAS login but the create account should drop you on the create profile page while the
+  signing in should take you to a user dashboard
+  
+  Flow should be as follows:
+  
+    Arrive at landing page
+      Select create account
+        Login with OSU account -->Delay going to page with warning of what is going on or put in sign in box
+          Successful Login redirects to create profile (have)
+            Profile gets successfully POSTED to db and information (have) 
+            **User is taken to a dashboard with an explanation with what they can do --> Dashboard should include menu system: 
+            post house (have), find house, find roommate -->Should also include saved houses/roommates
+          Unsuccessful Login redirects to fail page
+      Select sign in 
+        Successful Login redirects to user dashboard
+        Unsuccessful Login redirects to fail page
+        
+Clicking "Home" doesn't take you anywhere --> this should be realloacted to either not exist or redirect to user dashboard
+Clicking "Search" doesn't take you anywhere --> should change this menu system to be on the dashboard so that we can control 
+differences between roommate search and housing search
+Clicking "Results" takes us to the results of querying the housing database but this needs to change
+  Find housing should take you to the current results page but only with information which matches the user's parameters.
+  Essentially, we can have them fill out and advanced search and them grab all of the relevant entries in our database.
+  **Need to write an advanced search for housing, need to query the database correctly (adjust the code we already have),
+  **Need to add longitude and latitude per address in the database --> believe this can be done in Google API?
+  Find roommate should due something similar but without a map --> user photos instead? Need to get picture upload working
+  Need to make all results clickable so they will take you to our template housing/roommate forms.
+  
+Logout doesn't actually log you out --> needs to be fixed
+
+
+
+ 
