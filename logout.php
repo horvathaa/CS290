@@ -7,8 +7,7 @@
 $_SESSION["onidid"] = NULL;
 unset($_SESSION["onidid"]);
 
-if (session_destroy()){
-	
+if (session_destroy()){	
 	echo '<meta http-equiv="refresh" content="0; url=Landing.php" />';
 }
 
