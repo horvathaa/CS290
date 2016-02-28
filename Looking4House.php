@@ -22,10 +22,10 @@
 				<section style = "border: 100px double #000000; padding: 10px;">	
 					<br><b>Price Range: 
 										<select name="price">
-											<option value = "1">$1,000 to $1,500</option>
-											<option value = "2">$1,500 to $2,000</option>
-											<option value = "3">$2,000 to $2,500</option>
-											<option value = "4">$2,500 to $3,000</option>
+											<option name="pricerange" value = "1">$1,000 to $1,500</option>
+											<option name="pricerange" value = "2">$1,500 to $2,000</option>
+											<option name="pricerange" value = "3">$2,000 to $2,500</option>
+											<option name="pricerange" value = "4">$2,500 to $3,000</option>
 										</select><br>
 					
 					<br><b>My Bed Time: <input type="text" name="bedtime"></b><br>  
@@ -47,10 +47,10 @@
 					<br><b>My Transportation: 
 					
 										<select name="transport">
-											<option value = "1">Car</option>
-											<option value = "2">Moter Bike</option>
-											<option value = "3">Bicycle</option>
-											<option value = "4">None</option>
+											<option name="transport" value = "1">Car</option>
+											<option name="transport" value = "2">Moter Bike</option>
+											<option name="transport" value = "3">Bicycle</option>
+											<option name="transport" value = "4">None</option>
 										</select><br>
 					
 					
