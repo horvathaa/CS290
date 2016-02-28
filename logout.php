@@ -4,7 +4,7 @@
 
 <?php
 
-$_SESSION["onidid"] = NULL;
+$_SESSION["onidid"] ="";
 unset($_SESSION["onidid"]);
 
 if (session_destroy()){	
