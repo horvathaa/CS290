@@ -29,7 +29,7 @@
 				<input type="text" name="availableDate"><br>
 			<label>Length of lease?</label>
 				<input type="text" name="leaseLength"><br>
-			<label>Any rules associate with the property?</label><br>
+			<label>Any rules associated with the property?</label><br>
 				<textarea name="rules" rows="10" cols="30">
 					Put rules here
 				</textarea>
