@@ -5,7 +5,7 @@ Starting at landing page
  **should have the option of signing in or creating account; both will take you through
   CAS login but the create account should drop you on the create profile page while the
   signing in should take you to a user dashboard
-  
+  &&&&& Happy path completed for the following flow &&&&&
   Flow should be as follows:
   
     Arrive at landing page
@@ -19,7 +19,7 @@ Starting at landing page
       Select sign in 
         Successful Login redirects to user dashboard
         Unsuccessful Login redirects to fail page
-        
+  &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&      
 Clicking "Home" doesn't take you anywhere --> this should be realloacted to either not exist or redirect to user dashboard
 Clicking "Search" doesn't take you anywhere --> should change this menu system to be on the dashboard so that we can control 
 differences between roommate search and housing search
