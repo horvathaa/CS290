@@ -4,15 +4,14 @@
 <!-- SLIDESHOW ===============================================================================-->
 	<div class = "leftCol">
 		<div id = "slideshow">
-			<a><img id = "slide1" src = "images/house1.png"></a>
-			<a><img id = "slide2" src = "images/house2.png"></a>
-			<a><img id = "slide3" src = "images/house3.png"></a>
+			<a><img id = "slide" src = "images/house1.png"></a>
 		</div>
 		
 		<div id = "buttons">
-			<a id = "button1"></a>
-			<a id = "button2"></a>
-			<a id = "button3"></a>
+			<!--<a id = "buttonLeft"  onclick = "buttonClick(1)"></a>
+			<a id = "buttonRight" onclick = "buttonClick(2)"></a>-->
+			<img id = "buttonLeft" src = "images/leftArrow.png" onclick = "buttonClick(1)">
+			<img id = "buttonRight" src = "images/rightArrow.png" onclick = "buttonClick(2)">
 		</div>
 	</div>
 	
