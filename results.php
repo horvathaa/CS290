@@ -4,7 +4,6 @@
 	<title>Results</title>
 	<style type="text/css">
       html, body { height: 100%; margin: 0; padding: 0; }
-      #map { height: 50%; width: 50%; }
     </style>
 
 </head>
@@ -39,7 +38,7 @@
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkSZC-s7UaaBYVPmvMC_F7CPuHzZ7SQIU&callback=initMap">
     </script>
 	
-<div id="data" >
+<div id="searchData" >
 	<h1>Housing data</h1>
 
 		<?php
@@ -50,9 +49,11 @@
 				$dbName = "horvatha-db";
 				$conn = new mysqli($servername, $username, $password, $dbName);
 
-				echo "<table class='housing'><tr><th>Reason<th>HousingType<th>RoomAmount<th>Address<th>Rent<th>Until.Cost<th>AvailDate<th>LeaseLenght<th>Rules</tr>";
-						if ($result = $conn->query("select Reason,HousingType,roomAmount,Address,Rent,untilCost,availDate,leaseLength,rules from House_T")) {
+				//echo "<table class='housing'><tr><th>Reason<th>HousingType<th>RoomAmount<th>Address<th>Rent<th>Until.Cost<th>AvailDate<th>LeaseLenght<th>Rules</tr>";
+						//if ($result = $conn->query("select Reason,HousingType,roomAmount,Address,Rent,untilCost,availDate,leaseLength,rules from House_T")) {
+						if ($result = $conn->query("select Reason,HousingType,roomAmount,Address,Rent from House_T")) {
 							while($obj = $result->fetch_object()){ 
+								/*
 									echo "<tr>";
 									echo "<td>".htmlspecialchars($obj->Reason)."</td>"; 
 									echo "<td>".htmlspecialchars($obj->HousingType)."</td>"; 
@@ -64,6 +65,12 @@
 									echo "<td>".htmlspecialchars($obj->leaseLength)."</td>"; 
 									echo "<td>".htmlspecialchars($obj->rules)."</td>"; 
 									echo "</tr>";
+								*/
+									echo "<p>".htmlspecialchars($obj->Reason)." ".htmlspecialchars($obj->HousingType)."</p>";
+									echo "<p>".htmlspecialchars($obj->Address)."</p>";
+									echo "<p>".htmlspecialchars($obj->roomAmount)." rooms</p>";
+									echo "<p>$".htmlspecialchars($obj->Rent)." / month</p>";
+									echo "<hr>";
 							} 
 
 						$result->close();
