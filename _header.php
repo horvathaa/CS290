@@ -49,7 +49,7 @@
 <div id = "wrapper">
 	<!-- TOPBAR ==================================================================================-->
 	<div id = "topbar">
-		<a href = "result.php"><img src = "images/logo.png"></a>
+		<a href = "results.php"><img src = "images/logo.png"></a>
 	</div>
 	<!-- MAIN NAV ================================================================================-->
 	<nav>
