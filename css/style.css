@@ -132,7 +132,6 @@ nav > ul > li > a:hover, nav > ul > li.active > a
 	background: #303030;
 	border-bottom: 3px solid #3399ff;
 }
-*/
 
 /* ----------- SLIDESHOW ----------- */
 
@@ -161,27 +160,21 @@ nav > ul > li > a:hover, nav > ul > li.active > a
 	transition: opacity 1s ease;
 }
 
-#slide2, #slide3
-{
-	position: absolute;
-	top: 0;
-}
-
 #buttons
 {
-	width: 28%;
-	height: 12px;
-	margin: 10px 36% 0;
+	width: 40%;
+	height: 20px;
+	margin: 10px 0 0 30%;
 }
 
-#buttons a
+#buttons img
 {
-	background: #909090;
+	background: #606060;
 	display: block;
 	text-align: center;
-	width: 28%;
-	height: 100%;
-	margin: 0 0 4% 4%;
+	width: 40%;
+	height: 30px;
+	margin: 0 5%;
 	float: left;
 	opacity: 0.7;
 	
@@ -192,7 +185,7 @@ nav > ul > li > a:hover, nav > ul > li.active > a
 	transition: background 0.5s ease;
 }
 
-#buttons a:hover
+#buttons img:hover
 {
 	cursor: pointer;
 }
@@ -367,12 +360,6 @@ h1, h2, h3, h4, h5, h6
 {
 
 }
-
-
-
-
-
-
 
 
 
