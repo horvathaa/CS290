@@ -37,17 +37,20 @@ greyish teal#A7BFB1
 -->
 <?php include("_header.php"); ?>
 <?php
-	if(checkAuth(true) != "") {
+	//if(checkAuth(true) != "") {
 ?>
 
 <body bgcolor="#F7A810">
-<h1 style="float: center;">Welcome lawl</h1>
+<h1 style="float: center;">Welcome to Hom-E</h1>
 
 
-<div id="logIn" style="float: center;"> Log in API goes here...</div>
+<div id="logIn" style="float: center;">
+	<button ><a href="profileCreation.php">Sign Up Using OSU Account</a></button>
+	<button> <a href="dashboard.php">Log In</a></button>
+</div>
 
 
 
 </body>
 
-<?php } ?>
+<?php //} ?>

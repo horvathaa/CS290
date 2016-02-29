@@ -5,7 +5,7 @@
 	if (isset($_SESSION["onidid"]) && $_SESSION["onidid"] != "") return $_SESSION["onidid"];
 
 	 $pageURL = 'http';
-	 if (isset($_SERVER["HTTPS"]) && $_SERVER["HTTPS"] == "on") {$pageURL .= "s";}
+	 if (isset($_SERVER["HTTP"]) && $_SERVER["HTTP"] == "on") {$pageURL .= "s";}
 	 $pageURL .= "://";
 	 if ($_SERVER["SERVER_PORT"] != "80") {
 	  $pageURL .= $_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"].$_SERVER["SCRIPT_NAME"];
@@ -49,7 +49,7 @@
 <div id = "wrapper">
 	<!-- TOPBAR ==================================================================================-->
 	<div id = "topbar">
-		<a href = "results.php"><img src = "images/logo.png"></a>
+		<a href = "result.php"><img src = "images/logo.png"></a>
 	</div>
 	<!-- MAIN NAV ================================================================================-->
 	<nav>

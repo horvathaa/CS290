@@ -1,6 +1,8 @@
 <?php include("_header.php"); ?>
 
-
+<?php
+	if(checkAuth(true) != "") {
+?>
 
 <body>
 	<h1>
@@ -44,11 +46,11 @@
 			
 		</fieldset>
 	<br>
-	<input type="submit" value="Submit">
+	<a href="dashboard.php"><input type="submit" value="Submit"></a>
 	</form>
 	
 </body>
 
-
+<?php } ?>
 
 

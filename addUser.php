@@ -26,6 +26,7 @@
 		$statement->bind_param('isssssssssbi', $userId, $gender, $firstName, $lastName, $phone, $major, $age, $schYear, $relationshipStatus, $bio, $profile, $houseID);
 		$statement->execute();
 		$statement->close();
+		header("Location: dashboard.php");
 	}
 	else{
 		printf("Error: %s\n", $finalDB->error);

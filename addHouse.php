@@ -46,6 +46,7 @@
 		$statement->bind_param('issisddsssi', $houseId, $reason, $housingType, $roomAmount, $address, $rent, $utilCost, $availDate, $leaseLength, $rules, $userID);
 		$statement->execute();
 		$statement->close();
+		header("Location: dashboard.php");
 	}
 	else{
 		printf("Error: %s\n", $finalDB->error);
