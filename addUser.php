@@ -6,7 +6,7 @@
 	$dbName = "horvatha-db";
 	$finalDB = new mysqli($servername, $username, $password, $dbName);
 	
-	$query = "INSERT INTO User_T(UserID, Gender, firstName, lastName, phone, major, age, schYear, relationshipStatus, bio, Profile, HouseID) Values(?,?,?,?,?,?,?,?,?,?,?,?)";
+	$query = "INSERT INTO User_T(UserID, Gender, firstName, lastName, phone, major, age, schYear, relationshipStatus, bio, HouseID) Values(?,?,?,?,?,?,?,?,?,?,?)";
 	
 	if($statement = $finalDB->prepare($query)){
 	
@@ -20,10 +20,10 @@
 		$schYear = $_REQUEST['schYear'];
 		$relationshipStatus = $_REQUEST['relations'];
 		$bio = $_REQUEST['bio'];
-		$profile = rand(1, 5);
+		//$profile = rand(1, 5);
 		$houseID = rand(2, 2000);
 		
-		$statement->bind_param('isssssssssbi', $userId, $gender, $firstName, $lastName, $phone, $major, $age, $schYear, $relationshipStatus, $bio, $profile, $houseID);
+		$statement->bind_param('isssssssssi', $userId, $gender, $firstName, $lastName, $phone, $major, $age, $schYear, $relationshipStatus, $bio, $houseID);
 		$statement->execute();
 		$statement->close();
 		header("Location: dashboard.php");
