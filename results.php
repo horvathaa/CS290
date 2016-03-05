@@ -4,6 +4,7 @@
 	<title>Results</title>
 	<style type="text/css">
       html, body { height: 100%; margin: 0; padding: 0; }
+	  #map {height: 50%; width: 50%}
     </style>
 
 </head>
@@ -28,11 +29,22 @@
 		  });
 		  var marker = new google.maps.Marker({
 			position: {lat: 44.5636695, lng: -123.2690657},
-			map: map,
-			title: 'Hello World!'
+			map: map
 		  });
 		}
-
+	/*function geocodeAddress(geocoder, resultsMap) {
+		//need to get from db
+		geocoder.geocode({'address': address}, function(results, status) {
+		if (status === google.maps.GeocoderStatus.OK) {
+		  resultsMap.setCenter(results[0].geometry.location);
+		  var marker = new google.maps.Marker({
+			map: resultsMap,
+			position: results[0].geometry.location
+		  });
+		} else {
+		  alert('Geocode was not successful for the following reason: ' + status);
+		}
+		});*/
     </script>
     <script async defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkSZC-s7UaaBYVPmvMC_F7CPuHzZ7SQIU&callback=initMap">
