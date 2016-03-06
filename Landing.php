@@ -45,8 +45,8 @@ greyish teal#A7BFB1
 
 
 <div id="logIn" style="float: center;">
-	<button ><a href="profileCreation.php">Sign Up Using OSU Account</a></button>
-	<button> <a href="dashboard.php">Log In</a></button>
+	<button><a style="color: black;" href="profileCreation.php">Sign Up Using OSU Account</a></button>
+	<button><a style="color: black;" href="dashboard.php">Log In</a></button>
 </div>
 
 
