@@ -34,7 +34,7 @@
 	<h1><a href="results.php">Find Housing</a></h1>
 	<br>
 	
-	<h1><a href="offerHousing.php">Post House</a></h1>
+	<h1><a href="offeringHousing.php">Post House</a></h1>
 	<br>
 	<?php
 				ini_set('display_errors', 'On');
