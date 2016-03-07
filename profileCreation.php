@@ -36,7 +36,9 @@
 				<img src="http://www.bizfilings.com/images/QuestionMrk.gif" title="Living conditions can change when you have a partner! Let your potential roommates know!"><br><br>
 			Description/Bio:<br>
 			<textarea name="bio" rows="6" cols="35">
-			</textarea> <br><br>
+			</textarea> 
+                        ONID Username:<br>
+                        <input type="text" name="ONID"><br><br>
 		</fieldset>
 		<fieldset>
 			<legend> Connect through Social:</legend>
