@@ -47,7 +47,7 @@
 		}; */
 		var req = new XMLHttpRequest();
 		req.onload = function(){
-			var addresses = <?php echo json_encode($array) ?>;
+			var addresses = JSON.parse(req.responseText);// <?php echo json_encode($array) ?>;
 			console.log(addresses);
 			var i = 0;
 			for(i=0; i<addresses.length; i++){
