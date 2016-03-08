@@ -12,6 +12,7 @@
 
 	<div id="map"></div>
 	<script type="text/javascript">
+		var map;
 		function initMap() {
 		  map = new google.maps.Map(document.getElementById('map'), {
 			center: {lat: 44.5647222, lng: -123.2608333},
@@ -29,8 +30,8 @@
 			position: {lat: 44.5636695, lng: -123.2690657},
 			map: map
 		  });*/
-		}
-		function geocodeAddress(geocoder, resultsMap, address) {
+		} 
+		/* function geocodeAddress(geocoder, resultsMap, address) {
 			//need to get from db
 			geocoder.geocode({'address':address}, function(results, status) {
 			if (status === google.maps.GeocoderStatus.OK) {
@@ -43,17 +44,29 @@
 			  alert('Geocode was not successful for the following reason: ' + status);
 			}
 			});
-		};
+		}; */
 		var req = new XMLHttpRequest();
 		req.onload = function(){
-			var addresses = JSON.parse(this.responseText);
-			var map;
-			initMap();
+			var addresses = <?php echo json_encode($array) ?>;
+			console.log(addresses);
 			var i = 0;
-			while(addresses[i] != null){
-				geocodeAdress(geocoder, resultMap, addresses[i]);
-				i++;
-			}
+			for(i=0; i<addresses.length; i++){
+				//geocodeAddress(geocoder, resultMap, addresses[i]);
+				function geocodeAddress(geocoder, resultsMap) {
+					//need to get from db
+					geocoder.geocode({'address':addresses[i]}, function(results, status) {
+					if (status === google.maps.GeocoderStatus.OK) {
+					  resultsMap.setCenter(results[0].geometry.location);
+					  var marker = new google.maps.Marker({
+						map: resultsMap,
+						position: results[0].geometry.location
+					  });
+					} else {
+					  alert('Geocode was not successful for the following reason: ' + status);
+					}
+					});
+				};
+			}	
 		};
 			
 		req.open("get", "serverSideResults.php", true);

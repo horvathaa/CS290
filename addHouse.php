@@ -31,7 +31,7 @@
 	
 	if($statement = $finalDB->prepare($query)){
 	
-		$houseId= rand(4, 1000);
+		$houseId= rand(1000, 5000);
 		$reason = $_REQUEST["reason"];
 		$housingType = $_REQUEST['housingType'];
 		$roomAmount = $_REQUEST['roomAmount'];
@@ -41,7 +41,7 @@
 		$availDate = $_REQUEST['availableDate'];
 		$leaseLength = $_REQUEST['leaseLength'];
 		$rules = $_REQUEST['rules'];
-		$userID = rand(2, 2000);
+		$userID = rand(2000, 5000);
 		
 		$statement->bind_param('issisddsssi', $houseId, $reason, $housingType, $roomAmount, $address, $rent, $utilCost, $availDate, $leaseLength, $rules, $userID);
 		$statement->execute();

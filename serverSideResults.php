@@ -9,10 +9,12 @@ $array = array();
 if ($result = $conn->query("select Address from House_T")) {
 	while($obj = $result->fetch_object()){ 
 			$array[] = $obj->Address;
-	} 
+	}
+}
+$array[] = "something";	
 	echo json_encode($array);
 $result->close();
-}
+
 
 
 
