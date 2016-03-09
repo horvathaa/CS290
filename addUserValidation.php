@@ -9,12 +9,9 @@
 		$firstName = $_POST['firstname'];
 		$lastName = $_POST['lastname'];
 		$phone = $_POST['phone'];
-		$gender = $_POST['gender'];
-		$photo = $_POST['photo'];
 		$major = $_POST['major'];
 		$age = $_POST['age'];
 		$year = $_POST['schYear'];
-		$ship = $_POST['relations'];
 		$bio = $_POST['bio'];
 		$onid = $_POST['ONID'];
 		
@@ -24,7 +21,7 @@
 		$ageRegEx = '/^[0-9]{1,3}$/';
 		$yearRegEx = '/^[0-9]+$/';
 		$bioRegEx = '/^[a-zA-Z0-9!?() ]{0,300}$/';
-
+		
 		// Check each variable and set the error message accordingly
 		if (!ctype_alpha($firstName)) {
 			$error = 'Invalid first name';
@@ -35,14 +32,6 @@
 		else if (!preg_match($phoneRegEx, $phone) and $phone != "") {
 			$error = 'Invalid phone number';
 		}
-		else if ($gender != 'male' and $gender != 'female') {
-			$error = 'Invalid gender option';
-		}
-		else if (file_exists($photo)) {
-			if (getimagesize($photo) === FALSE) {
-				$error = 'Invalid file type for photo';
-			}
-		}
 		else if (!preg_match($majorRegEx, $major)) {
 			$error = 'Invalid major';
 		}
@@ -52,16 +41,13 @@
 		else if (!preg_match($yearRegEx, $year)) {
 			$error = 'Invalid year in school';
 		}
-		else if ($ship != 'single' and $ship != 'dating' and $ship != 'prefNotTo') {
-			$error = 'Invalid relationship status';
-		}
 		else if (!preg_match($bioRegEx, $bio)) {
 			$error = 'Invalid biography';
 		}
-		else if (!ctype_alphanum($firstName)) {
+		else if (!ctype_alnum($onid)) {
 			$error = 'Invalid ONID username';
 		}
-	};
+	}
 ?>
 
 

@@ -1,4 +1,8 @@
-<?php include("_header.php"); ?>
+<?php
+	include("_header.php");
+	include("addHouseValidation.php");
+?>
+
 <html>
 <head>
 	<title>Offer Housing</title>
@@ -8,7 +12,10 @@
 	<div>
 		<h1>Offer Housing</h1>
 		<p>This form will create your housing ad. Please fill it out to the best of your ability so the best people can be matched.</p>
-		<form method="post" action='addHouse.php' class="inform">
+		
+		<?=$error?>
+		
+		<form method="post" class="inform">
 			<label>Why are you posting the ad?<br></label>
 				<input type="radio" name="reason" value="permanent"> Permanently Vacating <br>
 				<input type="radio" name="reason" value="sublet"> Subletting <br>
@@ -35,11 +42,19 @@
 				</textarea>
 				<br>
 			
-			<input type="submit">
+			<input type="submit" name = "submit" value = "Submit">
 		</form>
 	
 	</div>
 
+	<?php
+		// If the post was submitted and $error is still blank (an error was not detected)
+		if (isset($_POST['submit']) and $error == '') {
+			// Include the 'addHouse' code
+			include 'addHouse.php';
+			echo '<meta http-equiv="refresh" content="0; url=dashboard.php" />';
+		}
+	?>
 
 </body>
 

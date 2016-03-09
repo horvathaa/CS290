@@ -14,13 +14,13 @@
 	
 	<?=$error?>
 	
-	<!-- <form action="addUser.php" method="post"> -->
 	<form method="post">
 		<fieldset>
 			<legend> Personal information:</legend>
 			
 			First name:<br>
 			<input type="text" name="firstname"><br>
+			<script> isValid($firstName, $nameRegEx) </script>
 			Last name:<br>
 			<input type="text" name="lastname"><br>
 			Phone &#40;optional&#41;:<br>
@@ -28,8 +28,6 @@
 			Gender:<br>
 				<input type="radio" name="gender" value="male"> Male<br>
 				<input type="radio" name="gender" value="female"> Female<br><br>
-			Photo &#40;optional&#41;:<br>
-			<input type="file" name="photo"><br>
 			Major:<br>
 			<input type="text" name="major"><br>
 			Age:<br>
@@ -55,15 +53,15 @@
 			
 		</fieldset>
 	<br>
-	<!-- <a href="dashboard.php"><input type="submit" name = "submit" value="Submit"></a> -->
 	<input type="submit" name = "submit" value="Submit">
 	</form>
 	
 	<?php
 		// If the post was submitted and $error is still blank (an error was not detected)
 		if (isset($_POST['submit']) and $error == '') {
-			// Inclide the 'addUser' code
+			// Include the 'addUser' code
 			include 'addUser.php';
+			echo '<meta http-equiv="refresh" content="0; url=dashboard.php" />';
 		}
 	?>
 	
