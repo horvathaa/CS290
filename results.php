@@ -74,7 +74,7 @@
 				$low = $_SESSION['low'];
 				$max = $_SESSION['max'];
 				/*var_dump($low)*/;
-				if ($result = $conn->query("select Reason,HousingType,roomAmount,Rent from House_T WHERE Reason='$reason' AND HousingType='$houseType' AND roomAmount='$roomAmount' AND Rent Between'$low' AND '$max'")){
+				if ($result = $conn->query("select Reason,HousingType,roomAmount,Rent,Address from House_T WHERE Reason='$reason' AND HousingType='$houseType' AND roomAmount='$roomAmount' AND Rent Between'$low' AND '$max'")){
 					while($obj = $result->fetch_object()){ 
 						
 							echo "<p> Vacancy: ".htmlspecialchars($obj->Reason)."</p>";
