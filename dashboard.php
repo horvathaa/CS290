@@ -1,4 +1,5 @@
-<?php include("_header.php"); ?>
+<?php session_start(); 
+      include("_header.php"); ?>
 <?php
 	if(checkAuth(true) != "") {
 ?>
@@ -37,15 +38,17 @@
 	<h1><a href="offeringHousing.php">Post House</a></h1>
 	<br>
 	<?php
-				ini_set('display_errors', 'On');
+	                        ini_set('display_errors', 'On');
 				$servername = "oniddb.cws.oregonstate.edu";
 				$username = "horvatha-db";
 				$password = "4xunHq7hNuAmTgFb";
 				$dbName = "horvatha-db";
+				$ONID = $_SESSION["ONID"];
+				//var_dump($ONID);
 				$conn = new mysqli($servername, $username, $password, $dbName);
 						 
 						 # dont understand this part
-						 if ($result = $conn->query("SELECT firstName, lastName, phone, Gender, major, age, schYear, relationshipStatus, bio FROM User_T WHERE UserID=1483")) { #NEED TO CHANGE USER ID TO MATCH WITH SOMEONE WHO IS LOGGED IN
+						 if ($result = $conn->query("SELECT firstName, lastName, phone, Gender, major, age, schYear, relationshipStatus, bio FROM User_T WHERE ONID='$ONID'")) { #NEED TO CHANGE USER ID TO MATCH WITH SOMEONE WHO IS LOGGED IN
 							while($obj = $result->fetch_object()){  
 							#display photo first
 									#echo .htmlspecialchars($obj->photo).;
@@ -65,15 +68,13 @@
 							} 
 
 						$result->close();
-						} 
+						 }
+			                         //else{
+						   //   var_dump($result);
+						 //}	
 
 
 		?>
-	</data>
-	<p>London is the capital city of England. It is the most populous city in the United Kingdom,
-	with a metropolitan area of over 13 million inhabitants.</p>
-	<p>Standing on the River Thames, London has been a major settlement for two millennia,
-	its history going back to its founding by the Romans, who named it Londinium.</p>
 </div>
 
 

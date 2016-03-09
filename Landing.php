@@ -35,7 +35,8 @@ greyish teal#A7BFB1
 
 <!--<body background="">
 -->
-<?php include("_header.php"); ?>
+<?php session_start();
+      include("_header.php"); ?>
 <?php
 	//if(checkAuth(true) != "") {
 ?>
@@ -45,6 +46,10 @@ greyish teal#A7BFB1
 
 
 <div id="logIn" style="float: center;">
+	<form method="post" action="set_session.php">
+	    Please enter your ONID username: <input type="text" name="ONID"><br>
+	    <input type="submit">
+        </form>
 	<button><a style="color: black;" href="profileCreation.php">Sign Up Using OSU Account</a></button>
 	<button><a style="color: black;" href="dashboard.php">Log In</a></button>
 </div>
@@ -53,4 +58,3 @@ greyish teal#A7BFB1
 
 </body>
 
-<?php //} ?>
