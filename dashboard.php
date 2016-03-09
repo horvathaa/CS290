@@ -10,10 +10,15 @@
     height: auto;
     float:left;
  }
- .section {
-    width: 55%;
+ .sectiona {
+    width: 45%;
     float:left;
     padding:10px; 
+}
+.sectionb{
+	width: 45%;
+	float: right;
+	padding: 10px;
 }
 
 
@@ -24,57 +29,38 @@
 <h1 style="float: center;">Welcome to Your Hom-E Dashboard</h1>
 
 
-<div class="leftcol">
-    <div id="data" >
-	<h1>Housing data</h1>
-
-</div>
-
-
-<div class="section">
-	<h1><a href="results.php">Find Housing</a></h1>
-	<br>
-	
-	<h1><a href="offeringHousing.php">Post House</a></h1>
-	<br>
+<div class="sectiona">
 	<?php
-	                        ini_set('display_errors', 'On');
+	            ini_set('display_errors', 'On');
 				$servername = "oniddb.cws.oregonstate.edu";
 				$username = "horvatha-db";
 				$password = "4xunHq7hNuAmTgFb";
 				$dbName = "horvatha-db";
 				$ONID = $_SESSION["ONID"];
-				//var_dump($ONID);
 				$conn = new mysqli($servername, $username, $password, $dbName);
-						 
-						 # dont understand this part
 						 if ($result = $conn->query("SELECT firstName, lastName, phone, Gender, major, age, schYear, relationshipStatus, bio FROM User_T WHERE ONID='$ONID'")) { #NEED TO CHANGE USER ID TO MATCH WITH SOMEONE WHO IS LOGGED IN
 							while($obj = $result->fetch_object()){  
-							#display photo first
-									#echo .htmlspecialchars($obj->photo).;
-									#echo "<br>";
 							#display information
-									echo "<p>".htmlspecialchars($obj->firstName)."</p>"; 
-									echo "<p>".htmlspecialchars($obj->lastName)."</p>"; 
-									echo "<p>".htmlspecialchars($obj->phone)."</p>"; 
-									echo "<p>".htmlspecialchars($obj->Gender)."</p>"; 
-									echo "<p>".htmlspecialchars($obj->major)."</p>"; 
-									echo "<p>".htmlspecialchars($obj->age)."</p>"; 
-									echo "<p>".htmlspecialchars($obj->schYear)."</p>"; 
-									echo "<p>".htmlspecialchars($obj->relationshipStatus)."</p>"; 
+									echo "<h3>Name: ".htmlspecialchars($obj->firstName)." ".htmlspecialchars($obj->lastName)."</h3>"; 
+									echo "<h3>Phone: ".htmlspecialchars($obj->phone)."</h3>"; 
+									echo "<h3>Gender: ".htmlspecialchars($obj->Gender)."</h3>"; 
+									echo "<h3>Major: ".htmlspecialchars($obj->major)."</h3>"; 
+									echo "<h3>Age: ".htmlspecialchars($obj->age)."</h3>"; 
+									echo "<h3>Year in School: ".htmlspecialchars($obj->schYear)."</h3>"; 
+									echo "<h3>Relationship Status: ".htmlspecialchars($obj->relationshipStatus)."</h3>"; 
 									echo "<br>";
-									echo "<p>".htmlspecialchars($obj->bio)."</p>";
+									echo "<h3>Bio: ".htmlspecialchars($obj->bio)."</h3>";
 									echo "<br>";
 							} 
 
 						$result->close();
 						 }
-			                         //else{
-						   //   var_dump($result);
-						 //}	
-
+			                   
 
 		?>
+</div>
+<div class="sectionb">
+	<p>You have successfully logged in. In the future you will be able to change your profile and post yourself as a roommate. You will also have your favorite houses and roommates appear here. For now though, check out Post House and Find House up above.</p>
 </div>
 
 
