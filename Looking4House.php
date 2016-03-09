@@ -1,38 +1,39 @@
 <!DOCTYPEhtml>
-<?php include("_header.php"); ?>
+<?php session_start() ?>
+<?php include("_header.php"); 
+	  include("searchVal.php");
+?>
 <html>
 <body>
 
-<form action="results.php?go" method="POST">
+<form method="POST">
 
 		<center>
 		
-		<h1 style="color:blue">Searching for Housing Application</h1>
-		
+		<h1 style="color:white" align = "center" >Searching for Housing Application</h1>
+					<?=$error?>
 		<div align = "center">
-		
+
 			<div style = "display: inline-block; text-align: left; ">
 			
-			<section style = "border: 20px double #000000; padding: 10px;">
+			<section style = "border: 20px double #000000; padding: 125px; ">
 				<b><p style="font-size: 18px" > Type of terms  </p></b>
-					<input type="radio" name="reason" value="permanent"> Permanently Vacating <br>
-					<input type="radio" name="reason" value="sublet"> Subletting <br>
-					<input type="radio" name="reason" value="roomAvailable"> Spare Room <br>
-					<br>
+					<input type="radio" name="reason" value="permanent"> Permanently Vacating 
+					<input type="radio" name="reason" value="sublet"> Subletting 
+					<input type="radio" name="reason" value="roomAvailable"> Spare Room 
+					<br><br>
 				<b><p style="font-size: 18px" > Type of housing  </p></b>
-					<input type="radio" name="housingType" value="house"> House <br>
-					<input type="radio" name="housingType" value="apartment"> Apartment <br>
-					<input type="radio" name="housingType" value="duplex"> Duplex <br>
-				
+					<input type="radio" name="housingType" value="house"> House 
+					<input type="radio" name="housingType" value="apartment"> Apartment 
+					<input type="radio" name="housingType" value="duplex"> Duplex 
+					
 			</section><br>
 				
-				<section style = "border:20px double #000000; padding: 10px;"><br>
-				<b>Price Range:</b><br><br> 
+				<section style = "border:20px double #000000; padding: 125px;"><br>
+				<b style="font-size: 18px">Price Range:</b><br><br> 
 							Min : <input type="text" name="low"> Max : <input type="text" name="max"> <br><br>
-				<b>Number of Rooms ?</b><br><br>
+				<b style="font-size: 18px">Number of Rooms ?</b><br><br>
 							<input type="text" name="roomAmount"><br><br>
-				<b>Untility cost per month?<b><br><br>
-							<input type="text" name="costUtil"><br><br>
 							
 						<input type="submit" name="submit" value = "Submit" >
 					
@@ -43,31 +44,13 @@
 		
 		</center>
 </form>
-<?php
-
-
-/* validation*/
-/*
-if(isset($_POST['submit'])){
-	if(isset($_GET['go'])){
-		if(preg_match("/[0-9]/{2,4}", $_POST['low'])){
-			$low=$_POST['low'];
-		}
-		if(preg_match("/[0-9]/{3,4}", $_POST['max'])){
-			$max=$_POST['max'];
-		}
-		if(preg_match("/[0-9]{3,4}/", $_POST['roomAmount'])){
-			$roomAmount=$_POST['roomAmount'];
-		}
-		if(preg_match("/[0-9]{2,4}/", $_POST['costUtil'])){
-			$costUtil=$_POST['costUtil'];
-		}
-		$house=$_POST['housingType'];
-		$reason=$_POST['reason'];
-		
+<?php 
+	if(isset($_POST['submit']) and $error == ''){
+	echo '<meta http-equiv="refresh" content="0; url=results.php" />';
 	}
-	
-*/
+?>
+
+<?php
 	
 	/*database access and pull stuff*/
 	/*

@@ -54,9 +54,9 @@
 	<!-- MAIN NAV ================================================================================-->
 	<nav>
 		<ul>
-			<li><a href = "Landing.php"> Home </a></li>
-			<li><a href = "searchEngine.php"> Search </a></li>
-			<li><a href = "results.php"> Result </a></li>
+			<li><a href = "Looking4House.php"> Find House </a></li>
+			<li><a href = "offeringHousing.php"> Post House </a></li>
+			<!--
 			<li>
 				<a href = "ViewProfile.php" id = 'dropDownTop'> Account </a>
 				<ul id = 'dropDownMenu'>
@@ -64,6 +64,7 @@
 					<li><a href = "logout.php"> Logout </a></li>
 				</ul>
 			</li>
+			-->
 		</ul>
 	</nav>
 	

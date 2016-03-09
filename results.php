@@ -7,12 +7,12 @@
 	<title>Results</title>
 	<style type="text/css">
       html, body { height: 100%; margin: 0; padding: 0; }
-	  #map {height: 70%; width: 58%}
+	  #map {height: 68%; width: 58%}
     </style>
 
 </head>
 <body>
-
+	<h3>Here are the houses which match your search. You can now go hunt down the house. In the future you will be able to contact the poster of the house but for right now this page is still under construction. </h3>
 	<div id="map"></div>
 	<script type="text/javascript">
 		//Code adapted from Google API example
@@ -68,7 +68,13 @@
 				$password = "4xunHq7hNuAmTgFb";
 				$dbName = "horvatha-db";
 				$conn = new mysqli($servername, $username, $password, $dbName);
-				if ($result = $conn->query("select Reason,HousingType,roomAmount,Address,Rent from House_T where Address like '%Corvallis%'")) {
+				$reason = $_SESSION['reason'];
+				$houseType = $_SESSION['house'];
+				$roomAmount = $_SESSION['roomAmount'];
+				$low = $_SESSION['low'];
+				$max = $_SESSION['max'];
+				/*var_dump($low)*/;
+				if ($result = $conn->query("select Reason,HousingType,roomAmount,Rent,Address,availDate from House_T WHERE Reason='$reason' AND HousingType='$houseType' AND roomAmount='$roomAmount' AND Rent Between'$low' AND '$max'")){
 					while($obj = $result->fetch_object()){ 
 						
 							echo "<p> Vacancy: ".htmlspecialchars($obj->Reason)."</p>";
@@ -76,10 +82,14 @@
 							echo "<p>".htmlspecialchars($obj->Address)."</p>";
 							echo "<p>".htmlspecialchars($obj->roomAmount)." rooms</p>";
 							echo "<p>$".htmlspecialchars($obj->Rent)." / month</p>";
+							echo "<p> Date Available : ".htmlspecialchars($obj->availDate)." </p>";
 							echo "<hr>";
 					} 
 
 					$result->close();
+				}
+				else{
+					echo "<p>Sorry no result match your search.</p>";
 				}
 				echo "</table>"; 
 
