@@ -34,8 +34,6 @@
 							Min : <input type="text" name="low"> Max : <input type="text" name="max"> <br><br>
 				<b style="font-size: 18px">Number of Rooms ?</b><br><br>
 							<input type="text" name="roomAmount"><br><br>
-				<b style="font-size: 18px">Untility cost per month?<b><br><br>
-							<input type="text" name="costUtil"><br><br>
 							
 						<input type="submit" name="submit" value = "Submit" >
 					
@@ -48,7 +46,7 @@
 </form>
 <?php 
 	if(isset($_POST['submit']) and $error == ''){
-		echo " this works ";
+	echo '<meta http-equiv="refresh" content="0; url=results.php" />';
 	}
 ?>
 

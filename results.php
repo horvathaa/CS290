@@ -68,7 +68,13 @@
 				$password = "4xunHq7hNuAmTgFb";
 				$dbName = "horvatha-db";
 				$conn = new mysqli($servername, $username, $password, $dbName);
-				if ($result = $conn->query("select Reason,HousingType,roomAmount,Address,Rent from House_T where Address like '%Corvallis%'")) {
+				$reason = $_SESSION['reason'];
+				$houseType = $_SESSION['house'];
+				$roomAmount = $_SESSION['roomAmount'];
+				$low = $_SESSION['low'];
+				$max = $_SESSION['max'];
+				/*var_dump($low)*/;
+				if ($result = $conn->query("select Reason,HousingType,roomAmount,Rent from House_T WHERE Reason='$reason' AND HousingType='$houseType' AND roomAmount='$roomAmount' AND Rent Between'$low' AND '$max'")){
 					while($obj = $result->fetch_object()){ 
 						
 							echo "<p> Vacancy: ".htmlspecialchars($obj->Reason)."</p>";
@@ -81,6 +87,7 @@
 
 					$result->close();
 				}
+				
 				echo "</table>"; 
 
 
