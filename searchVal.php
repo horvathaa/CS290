@@ -21,7 +21,7 @@
 		if(preg_match('/^[0-9]{1,4}$/', $_POST['roomAmount'])){
 			$_SESSION['roomAmount']=$_POST['roomAmount'];
 		}
-		else if(!preg_match('/^[0-9]{3,4}$/', $_POST['roomAmount'])){
+		else if(!preg_match('/^[0-9]{1,4}$/', $_POST['roomAmount'])){
 			$error = "Invalid room number";
 		}
 		

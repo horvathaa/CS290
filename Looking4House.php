@@ -31,9 +31,9 @@
 				
 				<section style = "border:20px double #000000; padding: 125px;"><br>
 				<b style="font-size: 18px">Price Range:</b><br><br> 
-							Min : <input type="text" name="low"> Max : <input type="text" name="max"> <br><br>
+							Min : <input type="text" pattern = "[0-9]{2,4}" title = "Enter 2-4 digits" name="low"> Max : <input type="text" pattern = "[0-9]{3,4}" title = "Enter 3-4 digits" name="max"> <br><br>
 				<b style="font-size: 18px">Number of Rooms ?</b><br><br>
-							<input type="text" name="roomAmount"><br><br>
+							<input type="text" pattern = "[0-9]{1,4}" title = "Enter up to 4 digits" name="roomAmount"><br><br>
 							
 						<input type="submit" name="submit" value = "Submit" >
 					
