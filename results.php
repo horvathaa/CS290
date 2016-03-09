@@ -7,12 +7,12 @@
 	<title>Results</title>
 	<style type="text/css">
       html, body { height: 100%; margin: 0; padding: 0; }
-	  #map {height: 70%; width: 58%}
+	  #map {height: 68%; width: 58%}
     </style>
 
 </head>
 <body>
-
+	<h3>Here are the houses which match your search. You can now go hunt down the house. In the future you will be able to contact the poster of the house but for right now this page is still under construction. </h3>
 	<div id="map"></div>
 	<script type="text/javascript">
 		//Code adapted from Google API example
