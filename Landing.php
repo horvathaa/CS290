@@ -26,6 +26,22 @@
     text-align:center;
     padding:5px;
 }
+#loginButton{
+	float: left;
+	width: 45%;
+	border-width: 10px;
+	border-style: solid;
+	text-indent: 60px;
+}
+#signUp{
+	float: right;
+	width: 45%;
+	border-width: 10px 10px 10px 10px;
+	border-style: solid;
+	padding: 0px 0px 15px 0px;
+	text-indent: 180px;
+	font-size: 20px;
+}
 </style>
 <!--colors?
 darker teal #6AC6AF
@@ -46,12 +62,15 @@ greyish teal#A7BFB1
 
 
 <div id="logIn" style="float: center;">
+	<div id="loginButton" >
 	<form method="post" action="set_session.php">
-	    Please enter your ONID username: <input type="text" name="ONID"><br>
-	    <input type="submit">
-        </form>
-	<button><a style="color: black;" href="profileCreation.php">Sign Up Using OSU Account</a></button>
-	<button><a style="color: black;" href="dashboard.php">Log In</a></button>
+	    Log In with ONID username: <input type="text" name="ONID">
+	   <a style="color: black;" href="dashboard.php"><input type="submit"></a>
+	</form>
+	</div>
+	<div id="signUp">
+		<a style="color: black;" a href="profileCreation.php">Sign Up Using OSU Account</a>
+	</div>
 </div>
 
 
