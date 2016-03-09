@@ -10,7 +10,7 @@
 
 		<center>
 		
-		<h1 style="color:blue" align = "center" >Searching for Housing Application</h1>
+		<h1 style="color:white" align = "center" >Searching for Housing Application</h1>
 					<?=$error?>
 		<div align = "center">
 

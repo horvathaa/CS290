@@ -8,7 +8,14 @@ $password = "4xunHq7hNuAmTgFb";
 $dbName = "horvatha-db";
 $conn = new mysqli($servername, $username, $password, $dbName);
 $array = array();
-if ($result = $conn->query("select Address from House_T where Address like '%Corvallis%'")) {
+$reason = $_SESSION['reason'];
+$houseType = $_SESSION['house'];
+$roomAmount = $_SESSION['roomAmount'];
+$low = $_SESSION['low'];
+$max = $_SESSION['max'];
+
+if ($result = $conn->query("select Address from House_T where  Reason='$reason' AND HousingType='$houseType' AND roomAmount='$roomAmount' AND Rent Between'$low' AND '$max'" )) {
+	
 	while($obj = $result->fetch_object()){ 
 			$temp = array(
 				"addr" => $obj->Address

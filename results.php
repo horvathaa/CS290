@@ -74,7 +74,7 @@
 				$low = $_SESSION['low'];
 				$max = $_SESSION['max'];
 				/*var_dump($low)*/;
-				if ($result = $conn->query("select Reason,HousingType,roomAmount,Rent,Address from House_T WHERE Reason='$reason' AND HousingType='$houseType' AND roomAmount='$roomAmount' AND Rent Between'$low' AND '$max'")){
+				if ($result = $conn->query("select Reason,HousingType,roomAmount,Rent,Address,availDate from House_T WHERE Reason='$reason' AND HousingType='$houseType' AND roomAmount='$roomAmount' AND Rent Between'$low' AND '$max'")){
 					while($obj = $result->fetch_object()){ 
 						
 							echo "<p> Vacancy: ".htmlspecialchars($obj->Reason)."</p>";
@@ -82,12 +82,15 @@
 							echo "<p>".htmlspecialchars($obj->Address)."</p>";
 							echo "<p>".htmlspecialchars($obj->roomAmount)." rooms</p>";
 							echo "<p>$".htmlspecialchars($obj->Rent)." / month</p>";
+							echo "<p> Date Available : ".htmlspecialchars($obj->availDate)." </p>";
 							echo "<hr>";
 					} 
 
 					$result->close();
 				}
-				
+				else{
+					echo "<p>Sorry no result match your search.</p>";
+				}
 				echo "</table>"; 
 
 
