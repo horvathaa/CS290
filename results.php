@@ -36,9 +36,10 @@
 		var req = new XMLHttpRequest();
 		req.onload = function(){
 			var addresses = JSON.parse(req.responseText);
+			console.log(addresses);
 			var i = 0;
 			for(i=0; i<addresses.length; i+=1){
-				geocoder.geocode({'address':addresses[i].addr}, function(results, status) {
+				geocoder.geocode({'address':addresses[i]}, function(results, status) {
 				if (status === google.maps.GeocoderStatus.OK) {
 				  var marker = new google.maps.Marker({
 					map: map,

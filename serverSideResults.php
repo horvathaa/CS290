@@ -16,11 +16,14 @@ $max = $_SESSION['max'];
 
 if ($result = $conn->query("select Address from House_T where  Reason='$reason' AND HousingType='$houseType' AND roomAmount='$roomAmount' AND Rent Between'$low' AND '$max'" )) {
 	
-	while($obj = $result->fetch_object()){ 
-			$temp = array(
-				"addr" => $obj->Address
-			);
-			array_push($array, $temp);
+	while($obj = $result->fetch_object()){
+			$count = 0;
+			if(in_array($obj->Address, $array)){
+				$count++;
+			}
+			if($count == 0){
+				array_push($array, $obj->Address);
+			}
 	}
 } 
 	echo json_encode($array);
