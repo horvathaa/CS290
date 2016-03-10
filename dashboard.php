@@ -36,7 +36,7 @@
 				$username = "horvatha-db";
 				$password = "4xunHq7hNuAmTgFb";
 				$dbName = "horvatha-db";
-				$ONID = $_SESSION["ONID"];
+				$ONID = $_SESSION["onidid"];
 				$conn = new mysqli($servername, $username, $password, $dbName);
 						 if ($result = $conn->query("SELECT firstName, lastName, phone, Gender, major, age, schYear, relationshipStatus, bio FROM User_T WHERE ONID='$ONID'")) { #NEED TO CHANGE USER ID TO MATCH WITH SOMEONE WHO IS LOGGED IN
 							while($obj = $result->fetch_object()){  
